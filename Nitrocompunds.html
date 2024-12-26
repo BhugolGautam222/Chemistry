@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitro Compound Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .answer {
+            color: green;
+            font-weight: bold;
+        }
+        .reaction {
+            font-family: monospace;
+            color: #34495e;
+            margin-left: 20px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .mechanism {
+            display: none;
+            margin-left: 40px;
+            color: #7f8c8d;
+            border-left: 2px solid #ddd;
+            padding-left: 10px;
+        }
+        .mechanism p {
+            margin: 5px 0;
+        }
+    </style>
+    <script>
+        function toggleMechanism(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Nitro Compound</h1>
+
+    <h2>Multiple Choice Questions</h2>
+    <div class="question">
+        <p><strong>1. Which of the following would not be a good choice for reducing a nitro compound to an amine?</strong></p>
+        <ul>
+            <li>a) H<sub>2</sub>/Pt</li>
+            <li>b) LiAlH<sub>4</sub>/ether</li>
+            <li>c) Fe and HCl</li>
+            <li class="answer">d) Sn and HCl (Correct Answer)</li>
+        </ul>
+    </div>
+    <div class="question">
+        <p><strong>2. The reagent used to change nitromethane to methylhydroxylamine is:</strong></p>
+        <ul>
+            <li>a) Zn/NaOH</li>
+            <li>b) Sn/HCl</li>
+            <li>c) Zn/NH<sub>4</sub>Cl</li>
+            <li class="answer">d) Zn/HCl (Correct Answer)</li>
+        </ul>
+        <p class="reaction" onclick="toggleMechanism('mechanism1')">Reaction: CH<sub>3</sub>NO<sub>2</sub> + Zn/HCl → CH<sub>3</sub>NHOH (Methylhydroxylamine)</p>
+        <div class="mechanism" id="mechanism1">
+            <p>**Mechanism:**</p>
+            <p>1. Nitro compound is reduced stepwise using Zn/HCl.</p>
+            <p>2. The intermediate nitroso compound is further reduced to hydroxylamine.</p>
+        </div>
+    </div>
+    <div class="question">
+        <p><strong>3. Reduction of nitrobenzene in neutral medium yields:</strong></p>
+        <ul>
+            <li>a) Nitrosobenzene</li>
+            <li class="answer">b) Phenylhydroxylamine (Correct Answer)</li>
+            <li>c) Azobenzene</li>
+            <li>d) Hydrazobenzene</li>
+        </ul>
+        <p class="reaction" onclick="toggleMechanism('mechanism2')">Reaction: C<sub>6</sub>H<sub>5</sub>NO<sub>2</sub> + Zn/NH<sub>4</sub>Cl → C<sub>6</sub>H<sub>5</sub>NHOH</p>
+        <div class="mechanism" id="mechanism2">
+            <p>**Mechanism:**</p>
+            <p>1. Nitrobenzene undergoes partial reduction to form nitrosobenzene.</p>
+            <p>2. Further reduction produces phenylhydroxylamine in a neutral medium.</p>
+        </div>
+    </div>
+
+    <h2>Short Answer Questions</h2>
+    <div class="question">
+        <p><strong>1. Why is nitrobenzene less reactive than benzene in electrophilic substitution reactions?</strong></p>
+        <p><strong>Answer:</strong> Nitrobenzene is less reactive because the nitro group (-NO<sub>2</sub>) is an electron-withdrawing group. It deactivates the benzene ring by reducing electron density and directs substitution to the meta position.</p>
+    </div>
+
+    <div class="question">
+        <p><strong>2. An organic compound A on refluxing with iodine in the presence of red phosphorus forms B. B reacts with ethanolic silver nitrite to form C, which reacts with sodium nitrite and HCl to get D. Alkaline D is blood red in color. Identify A, B, C, and D with reactions.</strong></p>
+        <p><strong>Answer:</strong></p>
+        <ul>
+            <li>A = CH<sub>3</sub>CH<sub>2</sub>NO<sub>2</sub> (Ethyl nitro compound)</li>
+            <li>B = CH<sub>3</sub>CH<sub>2</sub>I (Ethyl iodide)</li>
+            <li>C = CH<sub>3</sub>CH=NOH (Pseudonitrol)</li>
+            <li>D = Blood-red colored salt of nitrolic acid</li>
+        </ul>
+        <p class="reaction" onclick="toggleMechanism('mechanism3')">Click here for detailed reactions</p>
+        <div class="mechanism" id="mechanism3">
+            <p>**Reactions:**</p>
+            <p>1. CH<sub>3</sub>CH<sub>2</sub>NO<sub>2</sub> + I<sub>2</sub> (red P) → CH<sub>3</sub>CH<sub>2</sub>I</p>
+            <p>2. CH<sub>3</sub>CH<sub>2</sub>I + AgNO<sub>2</sub> → CH<sub>3</sub>CH=NOH</p>
+            <p>3. CH<sub>3</sub>CH=NOH + NaNO<sub>2</sub>/HCl → Blood-red D</p>
+        </div>
+    </div>
+
+    <h2>Long Answer Questions</h2>
+    <div class="question">
+        <p><strong>1. Explain the reduction of nitrobenzene in different media.</strong></p>
+        <p class="reaction" onclick="toggleMechanism('mechanism4')">Click here for explanation</p>
+        <div class="mechanism" id="mechanism4">
+            <p>**Neutral Medium:**</p>
+            <p>Zn + NH<sub>4</sub>Cl → Phenylhydroxylamine (C<sub>6</sub>H<sub>5</sub>NHOH).</p>
+            <p>**Alkaline Medium:**</p>
+            <p>Zn + NaOH → Azoxybenzene (C<sub>6</sub>H<sub>5</sub>N=NO).</p>
+            <p>**Acidic Medium:**</p>
+            <p>Zn + HCl → Aniline (C<sub>6</sub>H<sub>5</sub>NH<sub>2</sub>).</p>
+        </div>
+    </div>
+
+</body>
+</html>

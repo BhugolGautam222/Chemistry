@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldehyde and Ketone Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .answer {
+            color: green;
+            font-weight: bold;
+        }
+        .reaction {
+            font-family: monospace;
+            color: #34495e;
+            margin-left: 20px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .mechanism {
+            display: none;
+            margin-left: 40px;
+            color: #7f8c8d;
+            border-left: 2px solid #ddd;
+            padding-left: 10px;
+        }
+        .mechanism p {
+            margin: 5px 0;
+        }
+    </style>
+    <script>
+        function toggleMechanism(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Aldehyde and Ketone</h1>
+
+    <h2>Multiple Choice Questions</h2>
+    <div class="question">
+        <p><strong>1. The general formula for aldehyde is:</strong></p>
+        <ul>
+            <li>a) CnH2n+2</li>
+            <li>b) CnH2No</li>
+            <li>c) CnH2NO2</li>
+            <li class="answer">d) CnH2n+2O (Correct Answer)</li>
+        </ul>
+    </div>
+    <div class="question">
+        <p><strong>2. Which of the following gives ethanol on ozonolysis?</strong></p>
+        <ul>
+            <li class="answer">a) 2-butene (Correct Answer)</li>
+            <li>b) ethane</li>
+            <li>c) propene</li>
+            <li>d) 2,3-dimethyl but-2-ene</li>
+        </ul>
+        <p class="reaction" onclick="toggleMechanism('mechanism1')">Reaction: CH3-CH=CH-CH3 + O3 → 2 CH3CH2OH (ethanol)</p>
+        <div class="mechanism" id="mechanism1">
+            <p>**Mechanism:**</p>
+            <p>1. Ozone adds to the double bond, forming a molozonide intermediate.</p>
+            <p>2. The molozonide rearranges into an ozonide.</p>
+            <p>3. Hydrolysis of the ozonide with water gives ethanol.</p>
+        </div>
+    </div>
+    <div class="question">
+        <p><strong>3. Which of the following compounds cannot reduce Fehling’s reagent?</strong></p>
+        <ul>
+            <li>a) HCHO</li>
+            <li class="answer">b) C6H5CHO (Correct Answer)</li>
+            <li>c) CH3CHO</li>
+            <li>d) CH3CH(CH3)CHO</li>
+        </ul>
+        <p class="reaction" onclick="toggleMechanism('mechanism2')">Explanation: C6H5CHO (aromatic aldehyde) lacks an enediol intermediate.</p>
+        <div class="mechanism" id="mechanism2">
+            <p>**Mechanism:**</p>
+            <p>1. Fehling’s solution reacts with aldehydes via their enediol form.</p>
+            <p>2. Aromatic aldehydes, such as benzaldehyde (C6H5CHO), cannot form this intermediate and therefore cannot reduce Fehling’s solution.</p>
+        </div>
+    </div>
+
+    <h2>Short Answer Questions</h2>
+    <div class="question">
+        <p><strong>1. Write the functional isomer of propanal. How can you prepare the isomer from alcohol? What is Rosenmund’s reduction?</strong></p>
+        <p class="reaction" onclick="toggleMechanism('mechanism3')">Functional isomer of propanal: 2-propanone (acetone).</p>
+        <div class="mechanism" id="mechanism3">
+            <p>**Mechanism:**</p>
+            <p>1. Propanal (CH3CH2CHO) and acetone (CH3COCH3) are functional isomers because they share the molecular formula C3H6O but differ in the functional group.</p>
+        </div>
+        <p class="reaction" onclick="toggleMechanism('mechanism4')">Rosenmund’s reduction: CH3COCl + H2 (Zn/HCl) → CH3CHO.</p>
+        <div class="mechanism" id="mechanism4">
+            <p>**Mechanism:**</p>
+            <p>1. Acid chloride reacts with hydrogen gas in the presence of zinc and hydrochloric acid.</p>
+            <p>2. The reaction reduces the acid chloride to an aldehyde.</p>
+        </div>
+    </div>
+
+    <h2>Long Answer Questions</h2>
+    <div class="question">
+        <p><strong>1. Reaction Sequences and Identification:</strong></p>
+        <p>An alkene A on ozonolysis gives acetone and aldehyde. The aldehyde oxidizes to an acid B, which reacts with Br<sub>2</sub> (red phosphorus) to yield C. Compound C reacts with NaOH to form hydroxy acid D. Acid D is also obtained from acetone via HCN reaction followed by acidic hydrolysis.</p>
+        <p class="reaction" onclick="toggleMechanism('mechanism5')">Detailed Reaction Sequence</p>
+        <div class="mechanism" id="mechanism5">
+            <p>**Mechanism:**</p>
+            <p>1. Ozonolysis of CH3CH=CH2 gives CH3CHO (aldehyde) and CH3COCH3 (acetone).</p>
+            <p>2. CH3CHO oxidizes to CH3COOH (acetic acid).</p>
+            <p>3. CH3COOH reacts with Br2 to form CH2BrCOOH (bromoacetic acid).</p>
+            <p>4. CH2BrCOOH reacts with NaOH to form HOCH2COOH (glycolic acid).</p>
+        </div>
+    </div>
+</body>
+</html>
